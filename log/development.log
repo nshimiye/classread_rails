@@ -1,0 +1,243 @@
+
+
+Started GET "/assets/rails.png" for 128.59.26.127 at 2013-03-31 20:42:01 -0400
+Served asset /rails.png - 304 Not Modified (11ms)
+
+
+Started GET "/" for 128.59.26.127 at 2013-03-31 20:45:55 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Compiled home.css  (73ms)  (pid 19598)
+Compiled application.css  (132ms)  (pid 19598)
+Compiled jquery.js  (20ms)  (pid 19598)
+Compiled jquery_ujs.js  (2ms)  (pid 19598)
+Compiled home.js  (575ms)  (pid 19598)
+Compiled application.js  (644ms)  (pid 19598)
+Completed 200 OK in 949ms (Views: 948.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 128.59.26.127 at 2013-03-31 20:45:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/home.js?body=1" for 128.59.26.127 at 2013-03-31 20:45:56 -0400
+Served asset /home.js - 304 Not Modified (32ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 128.59.26.127 at 2013-03-31 20:45:56 -0400
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/home.css?body=1" for 128.59.26.127 at 2013-03-31 20:45:56 -0400
+Served asset /home.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 128.59.26.127 at 2013-03-31 20:45:56 -0400
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/application.css?body=1" for 128.59.26.127 at 2013-03-31 20:45:56 -0400
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/" for 128.59.26.127 at 2013-03-31 20:47:42 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 210ms (Views: 209.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:43 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/application.css?body=1" for 128.59.26.127 at 2013-03-31 20:47:43 -0400
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:43 -0400
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/home.css?body=1" for 128.59.26.127 at 2013-03-31 20:47:43 -0400
+Served asset /home.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/home.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:43 -0400
+Served asset /home.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:43 -0400
+Served asset /application.js - 304 Not Modified (71ms)
+
+
+Started GET "/" for 128.59.26.127 at 2013-03-31 20:47:46 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 46.8ms)
+
+
+Started GET "/assets/home.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:46 -0400
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 128.59.26.127 at 2013-03-31 20:47:46 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:46 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 128.59.26.127 at 2013-03-31 20:47:46 -0400
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:46 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:46 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 128.59.26.127 at 2013-03-31 20:47:48 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 47ms (Views: 46.9ms)
+
+
+Started GET "/assets/home.css?body=1" for 128.59.26.127 at 2013-03-31 20:47:48 -0400
+Served asset /home.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/home.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:48 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 128.59.26.127 at 2013-03-31 20:47:48 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:48 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 128.59.26.127 at 2013-03-31 20:47:48 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 128.59.26.127 at 2013-03-31 21:03:30 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 211ms (Views: 209.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 128.59.26.127 at 2013-03-31 21:03:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/home.css?body=1" for 128.59.26.127 at 2013-03-31 21:03:31 -0400
+Served asset /home.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 128.59.26.127 at 2013-03-31 21:03:31 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/home.js?body=1" for 128.59.26.127 at 2013-03-31 21:03:31 -0400
+Served asset /home.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 128.59.26.127 at 2013-03-31 21:03:31 -0400
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 128.59.26.127 at 2013-03-31 21:03:31 -0400
+Served asset /application.js - 304 Not Modified (72ms)
+
+
+Started GET "/" for 128.59.26.127 at 2013-03-31 21:04:41 -0400
+
+SyntaxError (/home/mars/Documents/rails_class/rails_projects/classread_app/config/routes.rb:54: syntax error, unexpected ':', expecting keyword_end
+  root :controller => :home, :action => :index :as => :home
+                                                ^):
+  activesupport (3.2.13) lib/active_support/dependencies.rb:245:in `load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:245:in `block in load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:236:in `load_dependency'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:245:in `load'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (3.2.13) lib/active_support/file_update_checker.rb:78:in `call'
+  activesupport (3.2.13) lib/active_support/file_update_checker.rb:78:in `execute'
+  activesupport (3.2.13) lib/active_support/file_update_checker.rb:86:in `execute_if_updated'
+  railties (3.2.13) lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  railties (3.2.13) lib/rails/application/finisher.rb:68:in `block (2 levels) in <module:Finisher>'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:429:in `_run__827721484__prepare__314127279__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_prepare_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/mars/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/mars/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/mars/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/mars/.rvm/gems/ruby-2.0.0-p0@rails200/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.4ms)
+  Rendered /home/mars/.rvm/gems/ruby-2.0.0-p0@rails200/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+  Rendered /home/mars/.rvm/gems/ruby-2.0.0-p0@rails200/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started GET "/" for 128.59.26.127 at 2013-03-31 21:04:56 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 50ms (Views: 48.5ms)
+
+
+Started GET "/assets/home.css?body=1" for 128.59.26.127 at 2013-03-31 21:04:56 -0400
+Served asset /home.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 128.59.26.127 at 2013-03-31 21:04:56 -0400
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/home.js?body=1" for 128.59.26.127 at 2013-03-31 21:04:56 -0400
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 128.59.26.127 at 2013-03-31 21:04:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 128.59.26.127 at 2013-03-31 21:04:56 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 128.59.26.127 at 2013-03-31 21:04:56 -0400
+Served asset /application.js - 304 Not Modified (3ms)
