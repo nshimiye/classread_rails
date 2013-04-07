@@ -1,7 +1,13 @@
 class User
   include Mongoid::Document
-
-  field :first_name, type => String
-  field :last_name,  type => String
-
+  
+  belongs_to :course
+  has_many :lecture
+  
+  field :lname, type: String
+  field :fname, type: String
+  field :email, type: String
+  
+  #any of: teacher, ta, student
+  field :status, type: String
 end

@@ -485,3 +485,94 @@ ActionController::RoutingError (No route matches [GET] "/"):
 
 
   Rendered /usr/local/lib/ruby/gems/2.0.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 14:47:12 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Compiled courses.css  (12ms)  (pid 24372)
+Compiled scaffolds.css  (50ms)  (pid 24372)
+Compiled application.css  (88ms)  (pid 24372)
+Compiled jquery.js  (18ms)  (pid 24372)
+Compiled jquery_ujs.js  (2ms)  (pid 24372)
+Compiled courses.js  (931ms)  (pid 24372)
+Compiled application.js  (1097ms)  (pid 24372)
+Completed 200 OK in 1388ms (Views: 1386.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /application.css - 200 OK (124ms)
+
+
+Started GET "/assets/courses.css?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /courses.css - 200 OK (18ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /home.css - 200 OK (14ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /scaffolds.css - 200 OK (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /jquery.js - 200 OK (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /jquery_ujs.js - 200 OK (10ms)
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /courses.js - 200 OK (8ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /home.js - 200 OK (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 14:47:14 -0400
+Served asset /application.js - 200 OK (34ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 14:49:14 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 156ms (Views: 155.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 14:49:14 -0400
+Served asset /application.css - 304 Not Modified (57ms)
+
+
+Started GET "/assets/courses.css?body=1" for 127.0.0.1 at 2013-04-07 14:49:14 -0400
+Served asset /courses.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 14:49:14 -0400
+Served asset /scaffolds.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-07 14:49:15 -0400
+Served asset /home.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 14:49:15 -0400
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 14:49:15 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2013-04-07 14:49:15 -0400
+Served asset /courses.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-07 14:49:15 -0400
+Served asset /home.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 14:49:15 -0400
+Served asset /application.js - 304 Not Modified (35ms)
