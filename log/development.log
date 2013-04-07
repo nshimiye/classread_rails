@@ -576,3 +576,91 @@ Served asset /home.js - 304 Not Modified (7ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 14:49:15 -0400
 Served asset /application.js - 304 Not Modified (35ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 15:47:56 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Compiled assignements.css  (12ms)  (pid 26056)
+Compiled lectures.css  (3ms)  (pid 26056)
+Compiled uploads.css  (3ms)  (pid 26056)
+Compiled users.css  (3ms)  (pid 26056)
+Compiled application.css  (84ms)  (pid 26056)
+Compiled assignements.js  (571ms)  (pid 26056)
+Compiled lectures.js  (604ms)  (pid 26056)
+Compiled uploads.js  (612ms)  (pid 26056)
+Compiled users.js  (578ms)  (pid 26056)
+Compiled application.js  (2424ms)  (pid 26056)
+Completed 200 OK in 2959ms (Views: 2957.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 15:47:59 -0400
+Served asset /application.css - 304 Not Modified (66ms)
+
+
+Started GET "/assets/assignements.css?body=1" for 127.0.0.1 at 2013-04-07 15:47:59 -0400
+Served asset /assignements.css - 200 OK (17ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /home.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/courses.css?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /courses.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /scaffolds.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/lectures.css?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /lectures.css - 200 OK (20ms)
+
+
+Started GET "/assets/uploads.css?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /uploads.css - 200 OK (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /users.css - 200 OK (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /jquery.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/assignements.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /assignements.js - 200 OK (89ms)
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /courses.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /home.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/lectures.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /lectures.js - 200 OK (7ms)
+
+
+Started GET "/assets/uploads.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /uploads.js - 200 OK (7ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /users.js - 200 OK (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 15:48:00 -0400
+Served asset /application.js - 304 Not Modified (39ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9279ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=classread_app_development collection=users selector={"course_id"=>"5161d09cf7b52bc6bd000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9668ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8693ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=classread_app_development collection=courses documents=[{"_id"=>"5161d09cf7b52bc6bd000001", "name"=>"Intro to Programming lang", "descript"=>"Teach beginners the concept of programming in ruby, focus on OOP and explore many libraries", "start_date"=>2013-06-24 08:01:01 UTC, "end_date"=>2013-09-25 06:59:59 UTC, "schedule"=>"Monday and Tuesday, 5:00 7:00"}] flags=[] (0.4373ms)

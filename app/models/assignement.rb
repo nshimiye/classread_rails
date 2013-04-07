@@ -2,7 +2,7 @@ class Assignement
   include Mongoid::Document
   
   #can be found through a course
-  emdedded_in :course
+  embedded_in :course
   
   #has_many :uploads
   

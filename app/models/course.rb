@@ -12,5 +12,5 @@ class Course
   field :descript, type: String
   field :schedule, type: String
   field :start_date, type: Time
-  field :end_date, type: Datatime
+  field :end_date, type: DateTime
 end
