@@ -26,16 +26,6 @@ Rails. You can read more about Action Pack in
 link:files/vendor/rails/actionpack/README.html.
 
 
-== my meetups
-
-Monday Night FREE Movie Screenings~TARANTINO
-Monday, April 8, 2013 at 9:00 PM
-
-
-
-
-
-
 == Getting Started
 
 1. At the command prompt, create a new Rails application:

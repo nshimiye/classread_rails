@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-ClassreadApp::Application.config.secret_token = 'e0bda8f6cf8b52769e0f067531ee3fb5e93b42420e76498fcedf91a93d28d6d3482b5d785fdd72d6a36ed429a543b15208fa6a40fbffc9802041bb6b3bd7ed0a'
+ClassreadApp::Application.config.secret_token = 'b85d50570473ebb18d753b328dff7c19303391beb590c972bf3e5b6a13415be9be64045de9f653ce4e9e525ed011e23c8d51c597bc8bdc801bd2ecee17cd42f7'
