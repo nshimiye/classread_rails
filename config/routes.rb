@@ -1,7 +1,4 @@
 ClassreadApp::Application.routes.draw do
-  resources :classfiles
-
-
   resources :grades
 
 
@@ -18,6 +15,7 @@ ClassreadApp::Application.routes.draw do
 
 
   get "home/index"
+  get "home/show"
 
   resources :courses
 
