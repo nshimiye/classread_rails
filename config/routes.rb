@@ -1,4 +1,10 @@
 ClassreadApp::Application.routes.draw do
+  resources :classfiles
+
+
+  resources :grades
+
+
   resources :uploads
 
 

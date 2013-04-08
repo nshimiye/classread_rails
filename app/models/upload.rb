@@ -4,9 +4,12 @@ class Upload
   #possible to be embedded
   belongs_to :course
   
+  #polymorphic
+  belongs_to :file_present, polymorphic: true
+ 
   field :file_name, type: String
   field :up_time, type: Time
   
   #this is any of: assignment, lecture notes, announcment, other
-  field :type, type: String
+  field :status, type: String
 end

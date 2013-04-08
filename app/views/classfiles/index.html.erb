@@ -1,0 +1,21 @@
+<h1>Listing classfiles</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @classfiles.each do |classfile| %>
+  <tr>
+    <td><%= link_to 'Show', classfile %></td>
+    <td><%= link_to 'Edit', edit_classfile_path(classfile) %></td>
+    <td><%= link_to 'Destroy', classfile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Classfile', new_classfile_path %>

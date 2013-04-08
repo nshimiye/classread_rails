@@ -3,10 +3,12 @@ class Course
   
   #only course has assignments (sorry for misspelling)
   embeds_many :assignement
-  
-  has_many :lecture
-  has_many :user
-  has_many :upload
+    
+  has_and_belongs_to_many :user
+  has_many :lectures
+
+  #polymorphic
+  has_many :uploads, :as => :file_present
   
   field :name, type: String
   field :descript, type: String

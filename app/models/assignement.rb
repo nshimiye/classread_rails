@@ -1,8 +1,8 @@
 class Assignement
   include Mongoid::Document
   
-  #can be found through a course
-  embedded_in :course
+  #need to contain course_id
+  belongs_to :course
   
   #has_many :uploads
   
