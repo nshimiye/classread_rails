@@ -1,4 +1,7 @@
 class CoursesController < ApplicationController
+  # assume this is to make sure only logged 
+  before_filter :require_user, :only => [:new, :create]
+  
   # GET /courses
   # GET /courses.json
   def index

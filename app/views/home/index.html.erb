@@ -1,22 +1,10 @@
 
 
-<h1>Hello world</h1>
+<h1>My course Planner</h1>
 <p>
-
-<div id="user_header" >
-  <% if current_user %>
-     Logged in as <%= current_user.fname %>
-     <%= link_to "Log Out", session_path("new") %>
-     <br/>
-      
-  <% else %>
-    <%= link_to "Sign Up", new_user_path %>
-    <%= link_to "Login In", new_session_path %>
-</div>
     <%= link_to "Check Courses",  courses_path %>
     <%= link_to "Check Users",  users_path %>
     <%= link_to "Check Courses",  courses_path %>
     <%= link_to "Check Users",  lectures_path %>
     <%= link_to "Check Users",  assignements_path %>
-  <% end %>
 </p>
