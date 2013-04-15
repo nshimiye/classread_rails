@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Held date:</b>
+  <%= @lecture.held_date %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @lecture.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @lecture.end_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_lecture_path(@lecture) %> |
+<%= link_to 'Back', lectures_path %>

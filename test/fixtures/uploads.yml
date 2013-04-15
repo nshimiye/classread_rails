@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  file_name: MyString
+  up_time: 2013-04-07 15:14:49
+  type: 
+
+two:
+  file_name: MyString
+  up_time: 2013-04-07 15:14:49
+  type: 
