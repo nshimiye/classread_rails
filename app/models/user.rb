@@ -10,4 +10,7 @@ class User
   
   #any of: teacher, ta, student
   field :status, type: String
+
+  #specify fields accessible for the user
+  #attr_accessible :lname, :fname, :email #:password, :password_confirmation
 end

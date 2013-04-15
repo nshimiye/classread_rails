@@ -1,18 +1,15 @@
 ClassreadApp::Application.routes.draw do
-  resources :grades
 
+  resources :grades
 
   resources :uploads
 
-
   resources :assignements
-
 
   resources :lectures
 
-
   resources :users
-
+  resources :sessions
 
   get "home/index"
   get "home/show"
