@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  held_date: 2013-04-07
+  start_time: 2013-04-07 15:08:54
+  end_time: 2013-04-07 15:08:54
+
+two:
+  held_date: 2013-04-07
+  start_time: 2013-04-07 15:08:54
+  end_time: 2013-04-07 15:08:54

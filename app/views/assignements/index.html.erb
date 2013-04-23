@@ -1,0 +1,29 @@
+<h1>Listing assignements</h1>
+
+<table>
+  <tr>
+    <th>Ass number</th>
+    <th>Post date</th>
+    <th>Dealine</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @assignements.each do |assignement| %>
+  <tr>
+    <td><%= assignement.Ass_number %></td>
+    <td><%= assignement.post_date %></td>
+    <td><%= assignement.dealine %></td>
+    <td><%= assignement.status %></td>
+    <td><%= link_to 'Show', assignement %></td>
+    <td><%= link_to 'Edit', edit_assignement_path(assignement) %></td>
+    <td><%= link_to 'Destroy', assignement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Assignement', new_assignement_path %>
