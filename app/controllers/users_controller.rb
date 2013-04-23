@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # you can only signup if u not logged in
   skip_before_filter :require_user, :only => [:new, :create]
+  before_filter :authorize, :only => [ :destroy]
   # GET /users
   # GET /users.json
   def index
@@ -46,6 +47,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else

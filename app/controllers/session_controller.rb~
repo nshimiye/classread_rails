@@ -6,11 +6,12 @@ class SessionController < ApplicationController
   def create
     user = User.find_by(username: params[:session][:usern])
     user = User.find_by(email: params[:session][:usern]) if user.nil?
-    if user && user.authenticate(params[:password])
+    if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      redirect_to courses_path, notice: "Logged in!"
+      flash[:notice] = "Logged in!"
+      redirect_to courses_path 
     else
-      flash.now[:error] = "Invalid login information"
+      flash[:error] = "Invalid login information"
       render "new"
     end
   end

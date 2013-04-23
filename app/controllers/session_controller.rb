@@ -8,15 +8,17 @@ class SessionController < ApplicationController
     user = User.find_by(email: params[:session][:usern]) if user.nil?
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      redirect_to courses_path, notice: "Logged in!"
+      flash[:notice] = "Logged in!"
+      redirect_to courses_path 
     else
-      flash.now[:error] = "Invalid login information"
+      flash[:error] = "Invalid login information"
       render "new"
     end
   end
   
   def destroy
     session[:user_id] = nil
+    flash[:notice] = "Logged in!"
     redirect_to root_url
   end
 

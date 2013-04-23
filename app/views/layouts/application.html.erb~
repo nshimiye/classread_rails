@@ -7,11 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+     <% if flash[:notice] -%>
+      <div id='notice'><%= flash[:notice] %></div>
+     <% end %>
+
   <div id="container">
     <div id="user_header">
 <% if @current_user %>
 
-   Welcome <%=  @current_user.lname %></br>
+   Welcome <%=  @current_user.lname %>
    <%= link_to 'Log Out', logout_path %> 
 <% else %>
     
@@ -20,6 +25,7 @@
     
 <% end %>
     </div>
+    
     <%= yield %>
   
   </div>
