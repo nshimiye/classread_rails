@@ -1,0 +1,19 @@
+<h1>Log In</h1>
+
+<%= form_for :session, :url => login_path, :method => :post do |f| %>
+      
+     <div class="field">
+        <%= f.label "Username or Email" %></br>
+        <%= f.text_field :usern %>
+     </div>
+     
+     <div class="field">
+       <%= f.label "Password" %></br>
+       <%= f.password_field :password %>
+     </div>
+     <div class="actions">
+       <%= f.submit "Log in" %>
+     </div>
+
+<% end %>
+

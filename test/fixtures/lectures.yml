@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lec_title: MyString
+  place: MyString
+  room: MyString
+  start_time: 
+  end_time: 
+
+two:
+  lec_title: MyString
+  place: MyString
+  room: MyString
+  start_time: 
+  end_time: 

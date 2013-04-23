@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ass_number: MyString
+  post_date: 
+  deadline: 
+  status: MyString
+
+two:
+  ass_number: MyString
+  post_date: 
+  deadline: 
+  status: MyString

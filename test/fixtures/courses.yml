@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cnumber: 
+  cname: MyString
+  cschedule: MyString
+  cplace: MyString
+  croom: MyString
+  start_date: 
+  end_date: 
+
+two:
+  cnumber: 
+  cname: MyString
+  cschedule: MyString
+  cplace: MyString
+  croom: MyString
+  start_date: 
+  end_date: 

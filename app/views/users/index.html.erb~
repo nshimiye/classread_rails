@@ -1,0 +1,36 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Fname</th>
+    <th>Lname</th>
+    <th>Email</th>
+    <th>Username</th>
+    <th>Password digest</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%= @current_user %>
+<% if @current_user %>
+  <% user = @current_user %>
+  <tr>
+    <td><%= user.fname %></td>
+    <td><%= user.lname %></td>
+    <td><%= user.email %></td>
+    <td><%= user.username %></td>
+    <td><%= user.password_digest %></td>
+    <td><%= user.status %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+</table>
+
+<br />
+  <% if user.status == 'admin'   %>
+    <%= link_to 'New User', new_user_path %>
+  <% end %>
+<% end %>

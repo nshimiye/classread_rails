@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lec title:</b>
+  <%= @lecture.lec_title %>
+</p>
+
+<p>
+  <b>Place:</b>
+  <%= @lecture.place %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @lecture.room %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @lecture.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @lecture.end_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_lecture_path(@lecture) %> |
+<%= link_to 'Back', lectures_path %>
