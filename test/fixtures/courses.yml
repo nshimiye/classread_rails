@@ -6,6 +6,7 @@ one:
   cschedule: MyString
   cplace: MyString
   croom: MyString
+  description: MyString
   start_date: 
   end_date: 
 
@@ -15,5 +16,6 @@ two:
   cschedule: MyString
   cplace: MyString
   croom: MyString
+  description: MyString
   start_date: 
   end_date: 

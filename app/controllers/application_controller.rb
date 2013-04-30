@@ -19,7 +19,7 @@ private
   
   def authorize
   #to be fixed
-    if current_user && current_user.status = 'admin'
+    if @current_user && @current_user.status == 'admin'
        return true
     end
     flash[:error] = 'Need to administrative permission to do this'
