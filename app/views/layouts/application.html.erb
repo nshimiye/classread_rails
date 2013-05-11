@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Csched</title>
+  <!-- -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Course keeper" %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- -->
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+ 
+  <!-- -->
+  <%= yield(:head) %>
+  <!-- -->
 </head>
 <body>
-      <% if flash[:error] -%>
-       <div id="error_explanation">
-         <%= flash[:error] %>
-       </div>
-     <% end %>
-     <% if flash[:notice] -%>
-      <div id='notice'><%= flash[:notice] %></div>
-     <% end %>
+  <!-- --> 
+  <header class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar-inner">
+      <div class="container">
+        <%= render 'layouts/navigation' %>
+      </div>
+    </nav>
+  </header>
+  <!-- -->
 
-  <div id="container">
-    <div id="user_header">
-<% if @current_user %>
-
-   Welcome <%=  @current_user.lname %>
-   <%= link_to 'Log Out', logout_path %> 
-<% else %>
-    
-      <%= link_to 'Sign up', signup_path %> 
-      <%= link_to 'Log In', login_path %>
-    
-<% end %>
-    </div>
-    
-    <%= yield %>
+  <div id="main" role="main">
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <div class="span12">
+            <%= render 'layouts/messages' %>
+            <%= yield %>
+          </div>
+        </div>
+        <footer>
+        </footer>
+      </div>
+    </div> <!-- end of .container -->
+    <div id="push"></div>
+  </div> <!-- end of #main -->
   
-  </div>
+
+    <footer class="footer">
+      <div class="container">
+        <%= render 'layouts/footer' %>
+      </div>
+    
+   </div><!-- footer -->
+
 </body>
 </html>

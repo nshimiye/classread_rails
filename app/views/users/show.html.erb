@@ -1,35 +1,38 @@
-<p id="notice"><%= notice %></p>
+<table class="table table-bordered table-hover">
+<caption>Your Profile</caption>
+<thead>
+<tr>
+  <th></th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Fname:</b></td>
+<td><%= @user.fname %></td>
+</tr>
+<tr>
+<td><b>Lname:</b></td>
+<td><%= @user.lname %></td>
+</tr>
+<tr>
+  <td><b>Email:</b></td>
+  <td><%= @user.email %></td>
+</tr>
+<tr>
+  <td><b>Username:</b></td>
+  <td><%= @user.username %></td>
+</tr>
+<tr>
+  <td><b>Status:</b></td>
+  <td><%= @user.status %></td>
+</tr>
+</tbody>
+</table>
 
-<p>
-  <b>Fname:</b>
-  <%= @user.fname %>
-</p>
+<%= link_to('Edit', edit_user_path(@user)) %> |
+<%= link_to( 'Back', users_path) %>
 
-<p>
-  <b>Lname:</b>
-  <%= @user.lname %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-
-<p>
-  <b>Username:</b>
-  <%= @user.username %>
-</p>
-
-<p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @user.status %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div>
+<%= render 'users/assignform' %>
+</div>

@@ -1,28 +1,16 @@
 <h1>Log In</h1>
 
-<%= form_for :session, :url => login_path, :method => :post do |f| %>
+<%= simple_form_for :session, :url => login_path, 
+        wrapper_html: { class: 'form-horizontal' },
+        :method => :post do |f| %>
 
-     <% if flash[:error] -%>
-       <div id="error_explanation">
-         <%= flash[:error] %>
-       </div>
-     <% end %>
-     <% if flash[:notice] -%>
-      <div id='notice'><%= flash[:notice] %></div>
-     <% end %>
-  
-     <div class="field">
-        <%= f.label "Username or Email" %></br>
-        <%= f.text_field :usern %>
-     </div>
-     
-     <div class="field">
-       <%= f.label "Password" %></br>
-       <%= f.password_field :password %>
-     </div>
-     <div class="actions">
-       <%= f.submit "Log in" %>
-     </div>
+       <%= f.input :usern, label: 'Username or Email',
+           label_html: {for: 'inputEmail' }
+       %>
+       <%= f.input :password, label: 'password', 
+                        placeholder: 'your secret key',
+           label_html: { for: 'inputPassword' }
+       %>
+       <%= f.submit 'Log in', :class => 'btn btn-primary' %>
 
 <% end %>
-

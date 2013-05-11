@@ -1,0 +1,16 @@
+<%= form_for( :register_class ) do |f| %>
+  <% #if is_admin? %>
+    <select multiple="multiple">
+      <%= f.label :Classes %><br />
+        <%= f.select( :classes,
+                     
+         [ @courses.each do |course|
+             [course.cname, course._id],
+           end 
+         ])
+        %>
+
+    </select>
+  <% #end %> <!-- end of is_admin-->
+  <%= f.submit 'Register for class', :class => 'btn btn-primary' %>
+<% end %>

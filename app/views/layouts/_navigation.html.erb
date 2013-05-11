@@ -1,0 +1,37 @@
+<%= link_to "HOME", root_path, :class => 'brand' %>
+<%= link_to "COURSES", courses_path, :class => 'brand' %>
+
+<%= link_to "STUDENTS", users_path, :class => 'brand' %>
+
+<ul class="nav">
+  <li class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="/users">
+    <% if @current_user %>
+      Profile
+    <% else %>
+      Account
+    <% end %>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+  <% if @current_user %>
+    <li>
+    <%= link_to('Logout', logout_path) %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to('Login', login_path)  %>
+    </li>
+  <% end %>
+  <% if @current_user %>
+    <li>
+    <%= link_to('Edit account', edit_user_path(@current_user)) %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to('Sign up', signup_path)  %>
+    </li>
+  <% end %>
+  </ul>
+  </li>
+</ul>

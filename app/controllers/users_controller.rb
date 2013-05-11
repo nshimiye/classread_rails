@@ -2,13 +2,14 @@ class UsersController < ApplicationController
   # you can only signup if u not logged in
   skip_before_filter :require_user, :only => [:new, :create]
   before_filter :authorize, :only => [ :destroy]
+  
   # GET /users
   # GET /users.json
   def index
     @users = User.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html #index.html.erb
       format.json { render json: @users }
     end
   end
@@ -32,7 +33,7 @@ class UsersController < ApplicationController
       # unregistered users or admin can create new users
       if session[:user_id].nil? || User.find(session[:user_id]).status == 'admin'
         @user = User.new
-    
+        
         format.html # new.html.erb
         format.json { render json: @user }
       else
@@ -58,6 +59,10 @@ class UsersController < ApplicationController
       if session[:user_id].nil? || User.find(session[:user_id]).status == 'admin'
       
         @user = User.new(params[:user])
+        
+        ####
+        @user.status = params[:user][:status] if is_admin?
+        #####        
         if @user.save
           session[:user_id] = @user.id
           format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -78,7 +83,9 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
-
+    ####
+    @user.status = params[:user][:status] if is_admin?
+    #####
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to @user, notice: 'User was successfully updated.' }

@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= repuire bootstrap
 //= require_tree .

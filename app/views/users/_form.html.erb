@@ -23,11 +23,16 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.select( :status, [['Student','student'], ['Teaching Assist', 'ta'],
-                 ['Teacher','teacher'],['Admin','admin']]) %>
-  </div>
+  
+  <% if is_admin? %>
+    <div class="field">
+      <%= f.label :status %><br/>
+      <%= f.select( :status, [['Student','student'], 
+                     ['Teaching Assist', 'ta'],
+                     ['Teacher','teacher'],['Admin','admin']]) %>
+    </div>
+  <% end %>
+  
   <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username %>
@@ -41,6 +46,6 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Register', :class => 'btn btn-primary'  %>
   </div>
 <% end %>

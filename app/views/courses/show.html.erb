@@ -1,45 +1,54 @@
-<p id="notice"><%= notice %></p>
+<table class="table table-bordered table-hover">
+<caption>Course Details</caption>
+<thead>
+<tr>
+  <th></th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <b>Cnumber:</b></td>
+  <td><%= @course.cnumber %></td>
+</tr>
 
-<p>
-  <b>Cnumber:</b>
-  <%= @course.cnumber %>
-</p>
+<tr>
+  <td><b>Cname:</b></td>
+  <td><%= @course.cname %></td>
+</tr>
 
-<p>
-  <b>Cname:</b>
-  <%= @course.cname %>
-</p>
+<tr>
+  <td><b>Cschedule:</b></td>
+  <td><%= @course.cschedule %></td>
+</tr>
 
-<p>
-  <b>Cschedule:</b>
-  <%= @course.cschedule %>
-</p>
+<tr>
+  <td><b>Cplace:</b></td>
+  <td><%= @course.cplace %></td>
+</tr>
 
-<p>
-  <b>Cplace:</b>
-  <%= @course.cplace %>
-</p>
+<tr>
+  <td><b>Croom:</b></td>
+  <td><%= @course.croom %></td>
+</tr>
 
-<p>
-  <b>Croom:</b>
-  <%= @course.croom %>
-</p>
+<tr>
+  <b>Description:</b></td>
+  <%= @course.description %></td>
+</tr>
 
-<p>
-  <b>Description:</b>
-  <%= @course.description %>
-</p>
+<tr>
+  <td><b>Start date:</b></td>
+  <td><%= @course.start_date %></td>
+</tr>
 
-<p>
-  <b>Start date:</b>
-  <%= @course.start_date %>
-</p>
-
-<p>
-  <b>End date:</b>
-  <%= @course.end_date %>
-</p>
-
+<tr>
+  <td><b>End date:</b></td>
+  <td><%= @course.end_date %></td>
+</tr>
+</tbody>
+</table>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>

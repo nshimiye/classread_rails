@@ -1,35 +1,66 @@
 <h1>Listing users</h1>
-
-<table>
+<caption>Your registration</caption>
+<table class="table table-hover">
+ <thead>
   <tr>
     <th>Fname</th>
     <th>Lname</th>
     <th>Email</th>
     <th>Username</th>
-    <th>Password digest</th>
     <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspan="1"></th>
   </tr>
+</thead>
 
-<% if @current_user %>
-  <% user = @current_user %>
-  <tr>
-    <td><%= user.fname %></td>
-    <td><%= user.lname %></td>
-    <td><%= user.email %></td>
-    <td><%= user.username %></td>
-    <td><%= user.password_digest %></td>
-    <td><%= user.status %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% if @current_user %> 
+    <tbody>
+    <% if is_admin?   %>
+        <% @users.each do |user| %>
+    <tr>
+        <td><%= user.fname %></td>
+        <td><%= user.lname %></td>
+        <td><%= user.email %></td>
+        <td><%= user.username %></td>
+        <td><%= user.status %></td>
+        <td>
+        <div class="btn-group">
+            <a class="btn btn-primary"><i class="icon-tasks icon-white"></i> Operations</a>
+            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><%= link_to 'View', user %></li>
+                <li><%= link_to 'Edit', edit_user_path(user) %></li>
+                <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            </ul>
+        </div>
+        </td>
+    </tr>
+        <% end %>
+    <% else %>
+        <% user = @current_user %>
+        <tr>
+        <td><%= user.fname %></td>
+        <td><%= user.lname %></td>
+        <td><%= user.email %></td>
+        <td><%= user.username %></td>
+        <td><%= user.status %></td>
+        <td>
+        <div class="btn-group">
+            <a class="btn btn-primary"><i class="icon-tasks icon-white"></i> Operations</a>
+            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><%= link_to 'View', user %></li>
+                <li><%= link_to 'Edit', edit_user_path(user) %></li>
+                <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            </ul>
+        </div>
+        </td>
+    </tr>
+    <% end %>
+    </tbody>
 </table>
 
 <br />
-  <% if user.status == 'admin'   %>
+  <% if is_admin?   %>
     <%= link_to 'New User', new_user_path %>
   <% end %>
 <% end %>

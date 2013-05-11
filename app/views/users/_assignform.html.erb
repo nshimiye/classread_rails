@@ -1,0 +1,58 @@
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" 
+            role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" 
+                    aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Assign courses to <%= @user._id %></h3>
+            </div>
+            <form class="contact" action='/registration/<%= @user._id %>' >
+            <fieldset>
+                <div class="modal-body row">
+                 <div class="span2">
+                 <h2>Unregistered</h2>
+                 <% 
+                 @courses = []
+                 i = 0
+                 Course.all.each do |c|
+                    @courses.append(c) unless c.user_ids.find_index(@user._id) 
+                    logger.info(i)
+                    logger.info(c.cname) unless c.user_ids.find_index(@user._id)
+                    i = i +1
+                 end
+                 %>
+                <%= select_tag(:classes, options_for_select(@courses.collect{|course| [course.cname, course._id] }),
+                            {:multiple => true, :size => 10})
+                 %>
+                   </div>
+                 <div class="span1"> 
+                 </div>
+                 <div class="span2">
+                 <h2>Registered</h2>
+                 <% 
+                 @c_reg = []
+                 i = 0
+                 Course.all.each do |c|
+                    @c_reg.append(c) if c.user_ids.find_index(@user._id) 
+                    logger.info(i)
+                    logger.info(c.cname) if c.user_ids.find_index(@user._id)
+                    i = i +1
+                 end
+                 %>
+                <%= select_tag(:c_reg, options_for_select(@c_reg.collect{|cr| [cr.cname, cr._id] }),
+                            {:multiple => true, :size => 10})
+                 %>
+                 </div>
+            </fieldset>
+            </form>
+            
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-primary" id="submit">Save changes</button>
+            </div>
+        </div>
+        
+        <br/>
+ 
+<!-- Button to trigger modal -->       
+<div id="thanks"><p><a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-block">Register this student for a class</a></p></div>

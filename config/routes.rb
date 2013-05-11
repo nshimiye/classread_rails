@@ -2,14 +2,11 @@ Csched::Application.routes.draw do
 
   resources :lectures
 
-
-  resources :courses
-
-
   resources :assignments
   resources :uploads
   resources :courses
   resources :users
+  resources :register_class
 
   get "home/index"
 
@@ -19,7 +16,9 @@ Csched::Application.routes.draw do
   match "login" => "session#create", :as => "login", :via => :post
   match "logout" => "session#destroy", :as => "logout"
 
-
+  match "registration/:id" => "register_class#new", :as => "registration", :via => :get
+  match 'registration/:id' => 'register_class#create', :as => "registration", :via => :post
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
