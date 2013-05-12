@@ -11,11 +11,10 @@ private
 
   helper_method :current_user  
   def require_user
-    
     if current_user
       return true
     end
-    redirect_to login_path
+    redirect_to in_path
   end
   
   def authorize
@@ -23,7 +22,7 @@ private
     if @current_user && is_admin?
        return true
     end
-    flash[:error] = 'Need to admin permission to do this'
+    flash[:error] = 'You need to be admin in order to do this'
     redirect_to root_path
   end
   

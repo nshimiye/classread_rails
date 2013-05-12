@@ -4,6 +4,7 @@
   
   <thead>
   <tr>
+    <th>count</th>
     <th>Cnumber</th>
     <th>Cname</th>
     <th>Cschedule</th>
@@ -17,11 +18,13 @@
   <tbody>
      <% user = @current_user 
         c_ids = user.course_ids
+        i = 0
      %>
      <% c_ids.each do |id| %>
         <!-- place querry in here -->
         <% course = Course.find_by( _id: id) %>
         <tr class="info">
+            <td><%= (i + 1).to_s %></td>
             <td><%= course.cnumber %></td>
             <td><%= course.cname %></td>
             <td><%= course.cschedule %></td>
@@ -34,20 +37,21 @@
             </td>
             <td>
             <div class="btn-group">
-                <a class="btn btn-primary"><i class="icon-tasks icon-white"></i> Operations</a>
+                <a class="btn btn-primary" href='/courses/<%= course._id  %>' method="GET" ><i class="icon-tasks icon-white"></i> Operations</a>
                 <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><%= link_to 'View', course %></li>
-                    <li><%= link_to 'Edit', edit_course_path(course) %></li>
-                    <li><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                    <li><%= link_to 'Edit', edit_course_path(course) if is_admin? %></li>
+                    <li><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } if is_admin? %></li>
                 </ul>
             </div>
             </td>
         </tr>
-            
+          <% i = i + 1 %>   
      <% end %>
 </tbody>
 </table>
 
 <br />
-<%= link_to( 'New Course', new_course_path ) if is_admin? %>
+<%= link_to( 'New Course', new_course_path, :class => "btn btn-large") if is_admin? %>
+<%= render 'courses/courseDescription' if is_admin? %>

@@ -1,5 +1,8 @@
 Csched::Application.routes.draw do
 
+  get "in/index"
+
+  resources :home
   resources :lectures
 
   resources :assignments
@@ -7,8 +10,6 @@ Csched::Application.routes.draw do
   resources :courses
   resources :users
   resources :register_class
-
-  get "home/index"
 
   match "signup" => "users#new", :as => "signup", :via => :get
   match "signup" => "users#create", :as => "signup", :via => :post
@@ -19,6 +20,8 @@ Csched::Application.routes.draw do
   match "registration/:id" => "register_class#new", :as => "registration", :via => :get
   match 'registration/:id' => 'register_class#create', :as => "registration", :via => :post
   
+  match 'in' => 'in#index', :as => "in"
+  match 'help_admin' => 'register_class#helpme', :as => "help_admin", :via => :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

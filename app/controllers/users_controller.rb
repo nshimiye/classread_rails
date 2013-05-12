@@ -53,7 +53,6 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     
-
     respond_to do |format|
       # unregistered users or admin can create new users
       if session[:user_id].nil? || User.find(session[:user_id]).status == 'admin'

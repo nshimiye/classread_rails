@@ -1,5 +1,7 @@
-<h1>Log In</h1>
 
+<% redirect_to in_path %>
+
+<h1>Log In</h1>
 <%= simple_form_for :session, :url => login_path, 
         wrapper_html: { class: 'form-horizontal' },
         :method => :post do |f| %>

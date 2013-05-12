@@ -30,8 +30,8 @@
 </tbody>
 </table>
 
-<%= link_to('Edit', edit_user_path(@user)) %> |
-<%= link_to( 'Back', users_path) %>
+<%= link_to('Edit', edit_user_path(@user), :class => "btn btn-large") if is_admin? %> |
+<%= link_to( 'Back to users', users_path, :class => "btn btn-large") %>
 
 <div>
 <%= render 'users/assignform' %>

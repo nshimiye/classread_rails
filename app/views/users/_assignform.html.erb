@@ -4,13 +4,14 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" 
                     aria-hidden="true">×</button>
-                <h3 id="myModalLabel">Assign courses to <%= @user._id %></h3>
+                <h4 id="myModalLabel">Assign courses to <%= @user.fname %></h4>
+                <p>selected classes under Unregistered/registered section will be added/removed to your record</p>
             </div>
             <form class="contact" action='/registration/<%= @user._id %>' >
             <fieldset>
                 <div class="modal-body row">
                  <div class="span2">
-                 <h2>Unregistered</h2>
+                 <h5>Unregistered</h5>
                  <% 
                  @courses = []
                  i = 0
@@ -28,7 +29,7 @@
                  <div class="span1"> 
                  </div>
                  <div class="span2">
-                 <h2>Registered</h2>
+                 <h5>Registered</h5>
                  <% 
                  @c_reg = []
                  i = 0
@@ -48,11 +49,24 @@
             
             <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                <button class="btn btn-primary" id="submit">Save changes</button>
+                <button class="btn btn-primary <% if is_admin? %> <% else %> disabled <% end %>" 
+                <% if is_admin? %> id="submit" <% else %> data-dismiss="modal" <% end %>
+                >
+                      <% if is_admin? %>
+        Save Changes
+    <% else %>
+        Don't click!!
+    <% end %></button>
             </div>
         </div>
         
         <br/>
  
 <!-- Button to trigger modal -->       
-<div id="thanks"><p><a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-block">Register this student for a class</a></p></div>
+<div id="thanks"><p><a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-block">
+<% if is_admin? %>
+        Register this student for a class
+    <% else %>
+        See Registered classes
+    <% end %>
+    </a></p></div>

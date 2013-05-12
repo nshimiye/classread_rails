@@ -1,0 +1,6 @@
+<form class="form-inline pull-right" action='/login' method="POST" >
+   <input type="text" name="usern" class="input" placeholder="Username/Email">
+   <input type="password" name="password" class="input" placeholder="Password">
+   <button type="submit" class="btn btn-primary">Log in</button>
+   <%= link_to('Sign up', signup_path, :class => 'btn btn-primary')  %>
+</form>

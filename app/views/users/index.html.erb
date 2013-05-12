@@ -24,7 +24,7 @@
         <td><%= user.status %></td>
         <td>
         <div class="btn-group">
-            <a class="btn btn-primary"><i class="icon-tasks icon-white"></i> Operations</a>
+            <a class="btn btn-primary" href="/users/<%= user._id %>"><i class="icon-tasks icon-white"></i> Operations</a>
             <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><%= link_to 'View', user %></li>
@@ -45,12 +45,12 @@
         <td><%= user.status %></td>
         <td>
         <div class="btn-group">
-            <a class="btn btn-primary"><i class="icon-tasks icon-white"></i> Operations</a>
+            <a class="btn btn-primary" href="/users/<%= user._id %>"><i class="icon-tasks icon-white"></i> Operations</a>
             <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><%= link_to 'View', user %></li>
-                <li><%= link_to 'Edit', edit_user_path(user) %></li>
-                <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+                <li><%= link_to 'Edit', edit_user_path(user) if is_admin? %></li>
+                <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } if is_admin? %></li>
             </ul>
         </div>
         </td>
@@ -61,6 +61,6 @@
 
 <br />
   <% if is_admin?   %>
-    <%= link_to 'New User', new_user_path %>
+    <%= link_to 'New User', new_user_path, :class => "btn btn-large" %>
   <% end %>
 <% end %>

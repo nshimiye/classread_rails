@@ -17,15 +17,25 @@
   <%= yield(:head) %>
   <!-- -->
 </head>
-<body>
-  <!-- --> 
-  <header class="navbar navbar-inverse navbar-fixed-top">
-    <nav class="navbar-inner">
-      <div class="container">
-        <%= render 'layouts/navigation' %>
-      </div>
-    </nav>
-  </header>
+<body class="b">
+    <!-- --> 
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar-inner">
+            <div class="container ">
+            <%= render 'layouts/navigation' %>
+            <%= render 'layouts/loginform' unless @current_user %>
+            </div>
+        </nav>
+    </div>
+<% if @current_user.nil? %>
+    <header class="jumbotron subhead">
+        <div class="container">
+            <h1>Course Keeper</h1>
+            <p class="lead">your favorite compsci college!!
+            </p>
+        </div>
+    </header>
+<% end %>
   <!-- -->
 
   <div id="main" role="main">
@@ -45,7 +55,7 @@
   </div> <!-- end of #main -->
   
 
-    <footer class="footer">
+    <footer class="footer navbar-inverse">
       <div class="container">
         <%= render 'layouts/footer' %>
       </div>
