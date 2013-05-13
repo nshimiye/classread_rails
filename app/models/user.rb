@@ -38,5 +38,6 @@ class User
   def password_changed?
     (old_password.blank? == false ) or (password_digest.blank? == true)
   end
-  
+
+
 end
