@@ -9,25 +9,32 @@ class RegisterClassController < ApplicationController
     if is_admin?
         destroy if params[:c_reg]
         @user = User.find_by(_id: params[:id])
-        c_ids = params[:classes] 
+        
+        if params[:classes] 
+            c_ids = params[:classes] 
     
-        #update courses first
-        c_ids.each do |id|
-            course = Course.find_by(_id: id)
-            course.user_ids.append(@user._id) unless course.user_ids.find_index(@user._id)
-            r = course.update #assume that it always works
-            #logger.info(r)
-        end if c_ids
+            #update courses first
+            c_ids.each do |id|
+                course = Course.find_by(_id: id)
+                course.user_ids.append(@user._id) unless course.user_ids.find_index(@user._id)
+                r = course.update #assume that it always works
+                #logger.info(r)
+            end if c_ids
     
-        @user.course_ids = c_ids if c_ids
+            @user.course_ids = c_ids if c_ids
+            #equal sign is enough to update database
+        end
      end
         respond_to do |format|
-            if is_admin? && @user.save
-                format.html { redirect_to @user, notice: 'Courses were successfully Assigned.' }
-                format.json { render json: @user, status: :created, location: @user }
+            if is_admin? && ( params[:classes] || params[:c_reg])
+                msg = { :status => "created", :message => "Courses were successfully Assigned.", :html => "<b>Success</b>" }
+                format.html { render :partial => '/register_class/create' }
+                format.json { render :json => msg }
             else
-                format.html { redirect_to @current_user, notice: 'failed to work' }
-                format.json { render json: @user.errors, status: :unprocessable_entity }
+                msg = { :status => "unprocessable_entity", 
+                        :message => "Some problems with update", :html => "<b>failed to work</b>" }
+                format.html { render :partial => '/register_class/failed' }
+                format.json { render :json => msg }
             end
         end
     
@@ -49,6 +56,7 @@ class RegisterClassController < ApplicationController
     end
     
   end
+  
   
   def helpme
     courses = Course.all 

@@ -32,20 +32,22 @@
                      ['Teacher','teacher'],['Admin','admin']]) %>
     </div>
   <% end %>
-  
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
+   <div class="field">
+        <%= f.label :username %><br />
+        <%= f.text_field :username %>
+   </div>
+    <% if @current_user.nil? %>
+       
+        <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password %>
+        </div>
+        <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation %>
+        </div>
+    <% end %>
   <div class="actions">
-    <%= f.submit 'Register', :class => 'btn btn-primary'  %>
+    <%= f.submit @current_user ? "Update Account" : "Register", :class => 'btn btn-primary btn-large'  %>
   </div>
 <% end %>

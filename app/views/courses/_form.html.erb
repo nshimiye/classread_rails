@@ -1,3 +1,4 @@
+<% if @course %>
 <%= form_for(@course) do |f| %>
   <% if @course.errors.any? %>
     <div id="error_explanation">
@@ -44,6 +45,6 @@
     <%= f.text_field :end_date %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Update course', :class => "btn btn-large" %>
   </div>
 <% end %>

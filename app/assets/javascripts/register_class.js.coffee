@@ -8,7 +8,7 @@ $ ->
       url: $("form").attr("action")
       data: $("form.contact").serialize()
       success: (msg) ->
-        $("#thanks").html('Success')
+        $("#thanks").html(msg)
         $("#myModal").modal("hide")
 
       error: ->

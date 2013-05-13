@@ -16,6 +16,9 @@ Csched::Application.routes.draw do
   match "login" => "session#new", :as => "login", :via => :get
   match "login" => "session#create", :as => "login", :via => :post
   match "logout" => "session#destroy", :as => "logout"
+  
+  match "updatepass/:id" => "users#updatepass", :as => "updatepass", :via => :get
+  match "updatepass/:id" => "users#updatepassp", :as => "updatepass", :via => :post
 
   match "registration/:id" => "register_class#new", :as => "registration", :via => :get
   match 'registration/:id' => 'register_class#create', :as => "registration", :via => :post

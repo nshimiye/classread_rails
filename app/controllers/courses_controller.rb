@@ -1,7 +1,8 @@
 class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
-  before_filter :authorize, :only => [:new, :edit, :create, :update, :destroy]
+  before_filter :authorize, :only => [:new, :create, :destroy]
+  before_filter :authorize_multiple, :only => [ :edit, :update]
   def index
     @courses = Course.all
 

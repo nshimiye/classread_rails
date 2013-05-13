@@ -5,6 +5,7 @@ namespace :csvtodb do
 
     require 'csv'
     rn = 0
+    i = 10
     CSV.foreach(Rails.root.join("lib/tasks/courses.csv"), :headers => :first_row) do |row|
 	# use row here...
         # row.each do |field|
@@ -19,7 +20,22 @@ namespace :csvtodb do
                             croom: row[6],
                             description: row[7])
         #insert it in db overidding the same entry if it exist
-        course.upsert         
+        course.upsert       
+=begin
+
+        names = row[7].split(',')    
+        usr = User.find_by(fname: names[1] )
+        
+        usr.fname = names[0] unless usr.nil?
+        usr.lname = names[1] unless usr.nil?
+        usr.status = "teacher" unless usr.nil?
+        usr.password = 'n' + i.to_s unless usr.nil?
+        uu = false
+        uu = usr.update unless usr.nil?
+        i = i + 1
+
+=end
+          
         puts('--in database--')
         rn = rn + 1
         #end

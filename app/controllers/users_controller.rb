@@ -84,6 +84,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     ####
     @user.status = params[:user][:status] if is_admin?
+    params[:user].delete(:status )
+    #pp = params[:user].merge(:password => '1' )
+    
+    logger.info(params[:user])
     #####
     respond_to do |format|
       if @user.update_attributes(params[:user])
@@ -95,6 +99,39 @@ class UsersController < ApplicationController
       end
     end
   end
+  
+  def updatepass
+    @user = User.find(params[:id])
+  end
+  
+  
+  #password check
+  def updatepassp
+    @user = User.find_by(_id: params[:id])
+    pass = nil
+    oldp = params[:user][:old_password]
+    pass = @user.authenticate(params[:user][:old_password]) if params[:user] 
+    respond_to do |format|
+        if @user && pass
+            #p = params[:user].delete(:old_password)
+             # session[:user_id] = user.id
+            if @user.update_attributes(params[:user])
+                #flash[:notice] = "password updated!"
+                format.html { redirect_to @user,  notice: 'User was successfully updated.' }
+                format.json { head :no_content }
+            else
+                #flash[:error] = "Failed to update"
+                format.html { render action: "updatepass"}
+                format.json { render json: @user.errors, status: :unprocessable_entity }
+            end
+        else
+            flash[:error] = "Invalid password"
+            format.html { render action: "updatepass", errors: 'Login failed'}
+            format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
+    end
+  end
+  
 
   # DELETE /users/1
   # DELETE /users/1.json

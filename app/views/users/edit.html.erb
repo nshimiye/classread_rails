@@ -1,6 +1,13 @@
+<% if @user %>
+
 <h1>Editing user</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Show', @user, :class => "btn btn-large" %> |
+<%= link_to 'Back', users_path, :class => "btn btn-large" %>
+
+<% else %>
+   <% flash[:error] = 'damn! how did u end up here?'
+   render "/layouts/messages" %> 
+<% end %>

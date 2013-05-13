@@ -48,8 +48,8 @@
             </form>
             
             <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                <button class="btn btn-primary <% if is_admin? %> <% else %> disabled <% end %>" 
+                <button class="btn btn-large" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-large btn-primary <% if is_admin? %> <% else %> disabled <% end %>" 
                 <% if is_admin? %> id="submit" <% else %> data-dismiss="modal" <% end %>
                 >
                       <% if is_admin? %>
@@ -62,11 +62,11 @@
         
         <br/>
  
-<!-- Button to trigger modal -->       
-<div id="thanks"><p><a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-block">
+<!-- Button to trigger modal -->   
+<div id="thanks"><a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large btn-block">
 <% if is_admin? %>
         Register this student for a class
     <% else %>
         See Registered classes
     <% end %>
-    </a></p></div>
+    </a></div>

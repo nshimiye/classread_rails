@@ -22,7 +22,21 @@ private
     if @current_user && is_admin?
        return true
     end
-    flash[:error] = 'You need to be admin in order to do this'
+    flash[:error] = 'You do not qualify  to do this one'
+    redirect_to root_path
+  end
+  
+  def authorize_multiple
+  #to be fixed
+    if @current_user && is_admin?
+       return true
+    elsif @current_user && is_teacher?
+        return true
+    
+    elsif @current_user && is_ta?
+        return true
+    end
+    flash[:error] = 'You do not qualify  to do this'
     redirect_to root_path
   end
   
@@ -35,6 +49,10 @@ private
   helper_method :is_teacher?
   def is_teacher?
     return @current_user && @current_user.status == 'teacher'
+  end
+  helper_method :is_ta?
+  def is_ta?
+    return @current_user && @current_user.status == 'ta'
   end
   
 end

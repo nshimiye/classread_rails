@@ -1,3 +1,4 @@
+<% if @user %>
 <table class="table table-bordered table-hover">
 <caption>Your Profile</caption>
 <thead>
@@ -30,9 +31,16 @@
 </tbody>
 </table>
 
-<%= link_to('Edit', edit_user_path(@user), :class => "btn btn-large") if is_admin? %> |
-<%= link_to( 'Back to users', users_path, :class => "btn btn-large") %>
-
+<%= link_to('Edit', edit_user_path(@user), :class => "btn btn-large") %> |
+<%= link_to( 'Back to users', users_path, :class => "btn btn-large") %> 
+<% if @current_user._id == @user._id  %> |
+    <%= link_to('Change Password', updatepass_path(@current_user), :class => "btn btn-large") %>
+<% end %>
 <div>
 <%= render 'users/assignform' %>
 </div>
+
+<% else %>
+   <% flash[:error] = 'damn! how did u end up here?'
+   render "/layouts/messages" %> 
+<% end %>
