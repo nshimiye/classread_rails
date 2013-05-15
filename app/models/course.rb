@@ -22,6 +22,4 @@ class Course
   
   validates_presence_of :cname, :cschedule, :allow_blank => false
   validates_uniqueness_of :cnumber, :allow_blank => false
-  
-  
 end
